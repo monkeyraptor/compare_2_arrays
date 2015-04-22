@@ -41,7 +41,7 @@ function c_a(a, b) {
                     };
         }
         
-    if (!!a && !!b) {        
+    if (typeof(a) === "object" && typeof(b) === "object") {        
         c = a.slice(); //clone array 1
         d = b.slice(); //clone array 2
         l_0 = c.length; //array 1 length
@@ -54,7 +54,7 @@ function c_a(a, b) {
             obj = splice_it(d, c, l_1, l_0);
         }                
     } else {
-        obj = "ERROR ARRAY INPUT";
+        obj = { "difference": "ERROR ARRAY INPUT", "same_elements": "ERROR ARRAY INPUT" };
     }
     return obj;
 }
