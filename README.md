@@ -5,6 +5,14 @@
 
 `c_a(array_1, array_2)`
 
+## Method
+
+It will automatically decide the array reference by `length`. The longest array will be the reference.
+
+If they have the same `length`, then the `array_1` will be the reference.
+
+This **won't change** both the original arrays.
+
 ## Output
 
 - For valid inputs, it will generate an object:
