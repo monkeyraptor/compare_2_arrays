@@ -1,16 +1,16 @@
-function c_a(a, b) {
+function c_a(a, b) { //comparer, splicer, and trimmer
     "use strict";
     var c, //array 1 clone
         d, //array 2 clone
         l_0, //array length
         l_1, //array length
         obj = {};
-        
-        function trim(a) {            
+
+        function trim(a) { //trimming the "... (deleted)" substitutions
             var i = 0,
                 l = a.length,
                 buffer = [];
-                
+
             for (i; i < l; i++) {
                 if (!a[i].toString().match("(deleted)")) {
                     buffer.push(a[i]);
@@ -18,19 +18,19 @@ function c_a(a, b) {
             }
             return buffer;
         }
-        
-        function splice_it(k, l, m, n) {
+
+        function splice_it(k, l, m, n) { //splicer
             var i = 0,
-                j,                
+                j,
                 buffer = [];
-                
-            for (i; i < m; i++) {
+
+            for (i; i < m; i++) { //2D iteration
                 j = 0;
-                for (j; j < n; j++) {         
+                for (j; j < n; j++) {
                     if (l[j] === k[i]) {
-                        buffer.push(l[j]);
-                        l.splice(j, 1, j + " (deleted)");
-                        k.splice(i, 1, i + " (deleted)");
+                        buffer.push(l[j]); //storing same elements
+                        l.splice(j, 1, l[j] + " (deleted)"); //substitute the spliced element with
+                        k.splice(i, 1, l[i] + " (deleted)"); //"that_element (deleted)" string.
                     }
                 }
             }
@@ -41,7 +41,7 @@ function c_a(a, b) {
                     };
         }
         
-    if (typeof(a) === "object" && typeof(b) === "object") {        
+    if (typeof(a) === "object" && typeof(b) === "object") { //check if inputs are "object"
         c = a.slice(); //clone array 1
         d = b.slice(); //clone array 2
         l_0 = c.length; //array 1 length
@@ -49,12 +49,12 @@ function c_a(a, b) {
         
         //Switch reference. The longest length is the reference.
         if (c.length >= d.length) {
-            obj = splice_it(c, d, l_0, l_1);              
+            obj = splice_it(c, d, l_0, l_1); //array_1.length > array_2.length
         } else {
-            obj = splice_it(d, c, l_1, l_0);
+            obj = splice_it(d, c, l_1, l_0); //array_2.length > array_1.length
         }                
     } else {
-        obj = { "difference": "ERROR ARRAY INPUT", "same_elements": "ERROR ARRAY INPUT" };
+        obj = { "difference": "ERROR ARRAY INPUT", "same_elements": "ERROR ARRAY INPUT" }; //error
     }
-    return obj;
+    return obj; //output
 }
