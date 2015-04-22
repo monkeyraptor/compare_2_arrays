@@ -14,6 +14,8 @@
   "same_elements": [array type]
 }
 ```
- > It can be accessed with `c_a(array_1, array_2).difference` and `c_a(array_1, array_2).same_elements`.
+ > They can be accessed by:
+  - `c_a(array_1, array_2).difference`
+  - `c_a(array_1, array_2).same_elements`.
 
-- For invalid input, it will generate error `string`.
+- For invalid input, it will generate **error** `string`.
