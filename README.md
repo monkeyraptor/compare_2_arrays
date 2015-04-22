@@ -1,5 +1,5 @@
 # Comparing 2 arrays
-*JavaScript: subtracting arrays, kinda the opposite of concat()*
+**JavaScript**: subtracting arrays, kinda the opposite of `concat()`.
 
 ## Usage
 
