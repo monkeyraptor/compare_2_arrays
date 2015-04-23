@@ -28,7 +28,7 @@ This **won't change** both the original arrays.
   
  > If there's **no same element** found, the `difference` property will consist of all the 2 arrays elements, and the `same_elements` property will have empty array `[]`.
 
-- For invalid input, it will generate **error** `string` for each object property.
+- For invalid input, it will generate ~~**error** `string`~~ empty array `[]` for each object property.
 
 ## Additional script for removing duplicates in each array
 
