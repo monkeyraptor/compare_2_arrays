@@ -54,7 +54,7 @@ function c_a(a, b) { //comparer, splicer, and trimmer
             obj = splice_it(d, c, l_1, l_0); //array_2.length > array_1.length
         }                
     } else {
-        obj = { "difference": "ERROR ARRAY INPUT", "same_elements": "ERROR ARRAY INPUT" }; //error
+        obj = { "difference": [], "same_elements": [] }; //error output
     }
     return obj; //output
 }
