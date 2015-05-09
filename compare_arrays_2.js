@@ -39,13 +39,13 @@ function c_a(a, b) {
             return {"difference": trim(k).concat(trim(l)), "same_elements": buffer};
         }
         
-    if (typeof(a) === "object" && typeof(b) === "object") {
+    if (Array.isArray(a) && Array.isArray(b)) {
         c = a.slice();
         d = b.slice();
         l_0 = c.length;
         l_1 = d.length;        
         
-        if (c.length >= d.length) {
+        if (l_0 >= l_1) {
             obj = splice_it(c, d, l_0, l_1);
         } else {
             obj = splice_it(d, c, l_1, l_0);
