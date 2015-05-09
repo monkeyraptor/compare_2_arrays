@@ -9,7 +9,7 @@ function c_a(a, b) {
         function trim(a) {
             var result;
             function p(v) {
-                if (!v.toString().match(/\(\*\)/g)) {
+                if (!!v.toString().match(/\(\*\)/g)) {
                     return false;
                 }
                 return true;
