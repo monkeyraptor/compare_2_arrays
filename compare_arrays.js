@@ -41,7 +41,7 @@ function c_a(a, b) { //comparer, splicer, and trimmer
                     };
         }
         
-    if (typeof(a) === "object" && typeof(b) === "object") { //check if inputs are "object"
+    if (a instanceof Array && b instanceof Array) { //check if inputs are arrays
         c = a.slice(); //clone array 1
         d = b.slice(); //clone array 2
         l_0 = c.length; //array 1 length
