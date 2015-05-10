@@ -1,55 +1,44 @@
-function c_a(a, b) {
+var c_a = function (a, b) {
     "use strict";
     var c,
         d,
-        l_0,
-        l_1,
-        obj = {"difference": [], "same_elements": []};
-
-        function trim(a) {
+        obj = {"difference": [], "same_elements": []},
+        trim = function (a) {
             var result;
             function p(v) {
+                var thingy = 1;
                 if (!!v.toString().match(/\(\*\)/g)) {
-                    return 0;
+                    thingy = 0;
                 }
-                return 1;
+                return thingy;
             }
             result = a.filter(p);
             return result;
-        }
-
-        function splice_it(k, l, m, n) {
-            var i = 0,
-                j,
-                buffer = [];
-
-            do {
-                j = 0;
-                do {
-                    if (l[j] === k[i]) {
-                        buffer.push(l[j]);
-                        l.splice(j, 1, l[j] + " (*)");
-                        k.splice(i, 1, l[i] + " (*)");
+        },
+        splice_it = function (k, l) {
+            var buffer = [],
+                result;
+            l.forEach(function (outer_value, outer_index) {
+                k.forEach(function (inner_value, inner_index) {
+                    if (outer_value === inner_value) {
+                        buffer.push(inner_value);
+                        l.splice(inner_index, 1, inner_value + " (*)");
+                        k.splice(outer_index, 1, outer_value + " (*)");
                     }
-                    j++;
-                } while (j < n);
-                i++;
-            } while (i < m);
-            
-            return {"difference": trim(k).concat(trim(l)), "same_elements": buffer};
-        }
-        
+                });
+            });
+            result = {"difference": trim(k).concat(trim(l)), "same_elements": buffer};
+            return result;
+        };
+
     if (Array.isArray(a) && Array.isArray(b)) {
         c = a.slice();
         d = b.slice();
-        l_0 = c.length;
-        l_1 = d.length;        
-        
-        if (l_0 >= l_1) {
-            obj = splice_it(c, d, l_0, l_1);
+        if (c.length >= d.length) {
+            obj = splice_it(c, d);
         } else {
-            obj = splice_it(d, c, l_1, l_0);
+            obj = splice_it(d, c);
         }                
     }
     return obj;
-}
+};
