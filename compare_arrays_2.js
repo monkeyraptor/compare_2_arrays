@@ -10,9 +10,9 @@ function c_a(a, b) {
             var result;
             function p(v) {
                 if (!!v.toString().match(/\(\*\)/g)) {
-                    return false;
+                    return 0;
                 }
-                return true;
+                return 1;
             }
             result = a.filter(p);
             return result;
