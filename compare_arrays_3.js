@@ -1,4 +1,4 @@
-var c_a = function (a, b) {
+function c_a(a, b) {
     "use strict";
     var c, d, obj;
     obj = {
