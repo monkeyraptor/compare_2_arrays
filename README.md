@@ -7,6 +7,9 @@
 c_a(array_1, array_2)
 ```
 
+It's recommended to use the latest [compare_arrays_3.js](https://github.com/monkeyraptor/compare_2_arrays/blob/master/compare_arrays_3.js)
+
+
 ## Method
 
 It will automatically decide the array reference by `length`. The longest array will be the reference.
@@ -33,10 +36,6 @@ This **won't change** both the original arrays.
  > If there's **no same element** found, the `difference` property will consist of all the 2 arrays elements, and the `same_elements` property will have empty array `[]`.
 
 - For invalid input, it will generate ~~**error** `string`~~ empty array `[]` for each object property.
-
-## For better output
-
-The input arrays should be sorted first before getting processed.
 
 ## Additional script for removing duplicates in each array
 
