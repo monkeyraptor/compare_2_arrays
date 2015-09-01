@@ -30,6 +30,10 @@ This **won't change** both the original arrays.
 
 - For invalid input, it will generate ~~**error** `string`~~ empty array `[]` for each object property.
 
+## For better output
+
+The input arrays should be sorted first before getting processed.
+
 ## Additional script for removing duplicates in each array
 
 You can also use [`remove duplicates`](https://github.com/monkeyraptor/remove_duplicates) to remove duplications in both arrays before they are compared. Depends your needs though.
