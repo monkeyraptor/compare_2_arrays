@@ -31,7 +31,7 @@ var c_a = function (a, b) {
             "same_elements": same
         };
     }
-    if (Array.isArray(a) && Array.isArray(b)) {
+    if (a instanceof Array && b instanceof Array) {
         c = a.slice();
         d = b.slice();
         if (c.length >= d.length) {
