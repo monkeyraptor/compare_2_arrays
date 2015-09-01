@@ -2,8 +2,8 @@ function c_a(a, b) {
     "use strict";
     var c, d, obj;
     obj = {
-        "difference": [],
-        "same_elements": []
+        difference: [],
+        same_elements: []
     };
     function trim(a) {
         var i = a.length;
@@ -27,8 +27,8 @@ function c_a(a, b) {
             });
         });
         return {
-            "difference": trim(l.concat(k)),
-            "same_elements": same
+            difference: trim(l.concat(k)),
+            same_elements: same
         };
     }
     if (a instanceof Array && b instanceof Array) {
