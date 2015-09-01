@@ -37,6 +37,6 @@ This **won't change** both the original arrays.
 
 - For invalid input, it will generate ~~**error** `string`~~ empty array `[]` for each object property.
 
-## Additional script for removing duplicates in each array
+## Additional method for removing duplicates in each array
 
-You can also use [`remove duplicates`](https://github.com/monkeyraptor/remove_duplicates) to remove duplications in both arrays before they are compared. Depends your needs though.
+You can also use [`remove duplicates`](https://github.com/monkeyraptor/remove_duplicates) to remove duplications in both arrays before they are compared or for trimming the final output. Depends your needs though.
