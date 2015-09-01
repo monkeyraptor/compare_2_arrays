@@ -22,7 +22,10 @@ This **won't change** both the original arrays.
 
 Both for valid and invalid inputs, this will generate an `object`.
 
-- For valid inputs, the output will be:
+### For **valid** inputs
+
+The output will be:
+
 ```javascript
 {
   "difference": [the different array element(s)],
@@ -36,7 +39,9 @@ They can be accessed by:
   ```
   If there's **no same element** found, the `difference` property will consist of all the 2 arrays elements, and the `same_elements` property will have empty array `[]`.
 
-- For invalid input, it will generate empty array `[]` value for each object property.
+### For **invalid** input
+
+It will generate empty array `[]` value for each object property.
 
 ## Additional method for removing duplicates from `array`
 
