@@ -5,18 +5,18 @@ function c_a(a, b) {
         difference: [],
         same_elements: []
     };
-    function trim(a) {
-        var i = a.length;
-        while (i >= 0) {
-            if (a[i] === "_*deleted*_") {
-                a.splice(i, 1);
-            }
-            i -= 1;
-        }
-        return a;
-    }
     function process_it(k, l) {
         var same = [];
+        function trim(a) {
+            var i = a.length;
+            while (i >= 0) {
+                if (a[i] === "_*deleted*_") {
+                    a.splice(i, 1);
+                }
+                i -= 1;
+            }
+            return a;
+        }
         l.forEach(function (v, i) {
             k.forEach(function (vv, ii) {
                 if (v === vv) {
