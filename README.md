@@ -3,7 +3,9 @@
 
 ## Usage
 
-`c_a(array_1, array_2)`
+```javascript
+c_a(array_1, array_2)
+```
 
 ## Method
 
@@ -23,8 +25,10 @@ This **won't change** both the original arrays.
 }
 ```
  > They can be accessed by:
-  - `c_a(array_1, array_2).difference`
-  - `c_a(array_1, array_2).same_elements`.
+  ```javascript
+  c_a(array_1, array_2).difference; // get the different array elements
+  c_a(array_1, array_2).same_elements; // get the same  array elements
+  ```
   
  > If there's **no same element** found, the `difference` property will consist of all the 2 arrays elements, and the `same_elements` property will have empty array `[]`.
 
