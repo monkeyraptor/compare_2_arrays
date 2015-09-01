@@ -20,23 +20,26 @@ This **won't change** both the original arrays.
 
 ## Output
 
-- For valid inputs, it will generate an object:
+Both for valid and invalid inputs, this will generate an `object`.
+
+- For valid inputs, the output will be:
 ```javascript
 {
-  "difference": [array type],
-  "same_elements": [array type]
+  "difference": [the different array element(s)],
+  "same_elements": [the same array element(s)]
 }
 ```
- > They can be accessed by:
+They can be accessed by:
   ```javascript
   c_a(array_1, array_2).difference; // get the different array elements
   c_a(array_1, array_2).same_elements; // get the same  array elements
   ```
-  
- > If there's **no same element** found, the `difference` property will consist of all the 2 arrays elements, and the `same_elements` property will have empty array `[]`.
+  If there's **no same element** found, the `difference` property will consist of all the 2 arrays elements, and the `same_elements` property will have empty array `[]`.
 
-- For invalid input, it will generate ~~**error** `string`~~ empty array `[]` for each object property.
+- For invalid input, it will generate empty array `[]` value for each object property.
 
-## Additional method for removing duplicates in each array
+## Additional method for removing duplicates from `array`
 
-You can also use [`remove duplicates`](https://github.com/monkeyraptor/remove_duplicates) to remove duplications in both arrays before they are compared or for trimming the final output. Depends your needs though.
+You can also use [`remove duplicates`](https://github.com/monkeyraptor/remove_duplicates) to remove duplications in both arrays before they are compared or for trimming the final output.
+
+Depends your needs though.
