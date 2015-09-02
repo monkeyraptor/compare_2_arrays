@@ -20,7 +20,7 @@ This **won't change** both the original arrays.
 
 ## Output
 
-Both for valid and invalid inputs, this will generate an `object`.
+Both for *valid* and *invalid* inputs, this will generate an `object`.
 
 ### For *valid* inputs
 
@@ -28,8 +28,8 @@ The output will be:
 
 ```javascript
 {
-  "difference": [the different array element(s)],
-  "same_elements": [the same array element(s)]
+  difference: [the different array element(s)],
+  same_elements: [the same array element(s)]
 }
 ```
 They can be accessed by:
